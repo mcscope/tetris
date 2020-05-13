@@ -71,7 +71,7 @@ def game_loop(board):
                         # asymptotic get faster
                         game_clock = game_clock * 0.95
                 except GameLoss:
-                    print(f"You Lose! Score {board.score}")
+                    print("You Lose! Score {0}".format(board.score))
 
                     return
 

@@ -144,7 +144,6 @@ class Board:
         if key == "up":
             old_rot = self.piece.rot
             self.piece.rot = (self.piece.rot + 1) % 4
-            print(f"{self.piece.rot}")
             if self.detect_collision():
                 # disallow
                 self.piece.rot = old_rot
@@ -191,7 +190,7 @@ class Board:
         board_border = "".join(["*" for _ in range(self.board_size["x"] + 2)])
         printbuf = []
         printbuf.append(board_border)
-        printbuf.append(f"|Score: {self.score} | Next: {self.piece_queue[0].shape}")
+        printbuf.append("|Score: {0} | Next: {1}".format(self.score,self.piece_queue[0].shape))
         printbuf.append(board_border)
         draw_buf = deepcopy(self.board)
 

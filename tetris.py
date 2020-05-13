@@ -15,7 +15,6 @@ game_clock = 0.8
 
 # class InputSpooler(threading.Thread):
 def spool_input(queue):
-    print("input starting")
     while playing:
         key = get_input()
         queue.put(key)
@@ -24,7 +23,6 @@ def spool_input(queue):
 
 # class InputSpooler(threading.Thread):
 def blockdown(queue):
-    print("blockdown starting")
     while playing:
         if RING_BELL:
             sys.stdout.write('\a')
